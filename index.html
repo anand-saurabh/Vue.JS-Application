@@ -15,6 +15,12 @@
       <h1>
         <a v-bind:href="website"> Vue documentation</a>
       </h1>
+      <input type="text" v-on:keyup.enter="click" v-model="name"> enter your name and press enter</input>
+      <br></br>
+      <button v-on:click.once="getlikes"> Like this link only once ?</button>
+      <button v-on:click="getlikes"> Like this link ?</button>
+      <h1> Total likes : {{count}}</h1>
+      <a v-on:click.prevent="click" href="https://vuejs.org/v2/guide/">non-clickable link</a>
     </div>
     <script type="text/javascript" src="app.js">
     </script>
